@@ -1,0 +1,36 @@
+<div class="side-text">
+                
+</div>
+
+<div class="two-boxes">
+
+	<div class="small-text pull-left">
+		<div 
+		class="speech-text green small pull-left bubble-left" 
+		ng-class= "{'active':objection === 'objection4'}" 
+		speech-text 
+		ch-objection="objection4" 
+		ch-route="b"
+		id="objection4">
+			I am concerned that the open label design in your Phase III trials programme may bias
+		</div>
+
+		<button arrow-down ch-step="1" ch-route="b" ch-objection="objection6" class="next-arrow" ng-show="stage.route == 'b'" ng-disabled="stage.route == 'b' && stage.step > 1"></button>
+	</div>
+  
+
+	<div class="small-text pull-right">
+	  <div 
+	  class="speech-text green small pull-right bubble-left"  
+	  ng-class= "{'active':objection === 'objection5'}" 
+	  speech-text 
+	  ch-objection="objection5" 
+	  ch-route="c"
+	  id="objection5">
+	    Alternative response: Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet?
+	  </div>
+		
+	  <button arrow-down ch-step="1" ch-route="c" ch-objection="objection8" class="next-arrow" ng-show="stage.route == 'c'"></button>
+	</div>
+
+</div>

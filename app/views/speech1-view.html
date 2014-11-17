@@ -1,0 +1,16 @@
+
+  <div class="side-text">
+    Objection
+  </div>
+  
+  <div class="speech-text green first bubble-left" ng-class= "{'active':objection === 'objection1'}" speech-text ch-objection="objection1" id="objection1">
+    The open-label design could bias the results and weaken the capacity to make a rigorous assessment of the data.
+
+    <!-- <span class="arrow green-left"></span>
+    <span class="arrow green-right"></span> -->
+  </div>
+
+  <div class="arrow-container">
+  	<button arrow-down ch-step="2" ch-route="a" ch-objection="objection2" class="next-arrow" ng-disabled="stage.step>1 || stage.route != 'a'"></button>
+  </div>
+  

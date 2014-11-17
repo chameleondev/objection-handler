@@ -1,0 +1,14 @@
+<div class="side-text">
+Acknowledge
+</div>
+
+<div class="speech-text blue bubble-right" ng-class= "{'active':objection === 'objection2'}" speech-text ch-objection="objection2" id="objection2">
+Doctor, I understand your concern regarding the open-label design.
+
+<!-- <span class="arrow green-left"></span>
+<span class="arrow green-right"></span> -->
+</div>
+
+<div class="arrow-container">
+	<button arrow-down ch-step="3" ch-route="a" ch-objection="objection3" class="next-arrow" ng-disabled="stage.step>2 || stage.route != 'a'"></button>
+</div>
