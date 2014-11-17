@@ -132,6 +132,9 @@ app.config(function($stateProvider,$urlRouterProvider) {
 				},
 				'content8@home' : {
 					templateUrl : 'views/objection5/content.html'
+				},
+				'makeChoice@home' : {
+					template : '<h1 style="margin: 60px 0 0 0;">Make a choice</h1>'
 				}
 			}
 		});
@@ -175,11 +178,23 @@ app.directive('speechText',function(){
 
 		 		console.log('speech text');
 
-		 		$scope.$parent.objection = iAttrs.chObjection;
+		 		$scope.$apply(function(){
 
-		 		iAttrs.chRoute ? $scope.$parent.stage.route = iAttrs.chRoute : false;
+		 			$scope.$parent.objection = iAttrs.chObjection;
 
-		 		$scope.$apply();
+			 		iAttrs.chRoute ? $scope.$parent.stage.route = iAttrs.chRoute : false;
+
+			 		
+
+			 		if (iElm.hasClass('small-bubble')) {
+
+			 			$scope.$parent.stage.step = 0;
+
+			 		};
+
+
+			 	});
+	
 
 		 	});
 
