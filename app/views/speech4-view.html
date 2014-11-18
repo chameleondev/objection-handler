@@ -15,7 +15,7 @@
 			I am concerned that the open label design in your Phase III trials programme may bias
 		</div>
 
-		<button arrow-down ch-step="1" ch-route="b" ch-objection="objection6" class="next-arrow" ng-show="stage.route == 'b'" ng-disabled="stage.route == 'b' && stage.step > 1"></button>
+		<button arrow-down ch-step="1" ch-route="b" ch-objection="objection6" class="next-arrow" ng-show="stage.route == 'b'" ng-disabled="stage.route == 'b' && stage.step > 0"></button>
 	</div>
   
 
@@ -30,7 +30,7 @@
 	    Alternative response: Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet?
 	  </div>
 		
-	  <button arrow-down ch-step="1" ch-route="c" ch-objection="objection8" class="next-arrow" ng-show="stage.route == 'c'"></button>
+	  <button arrow-down ch-step="1" ch-route="c" ch-objection="objection8" class="next-arrow" ng-show="stage.route == 'c'" ng-disabled="stage.route == 'c' && stage.step > 0"></button>
 	</div>
 
 </div>

@@ -133,8 +133,11 @@ app.config(function($stateProvider,$urlRouterProvider) {
 				'content8@home' : {
 					templateUrl : 'views/objection5/content.html'
 				},
-				'makeChoice@home' : {
-					template : '<h1 style="margin: 60px 0 0 0;">Make a choice</h1>'
+				'makeChoiceTop@home' : {
+					template : '<div class="video video1"></div>'
+				},
+				'makeChoiceBottom@home' : {
+					templateUrl : 'views/makeChoice-view.html'
 				}
 			}
 		});
@@ -228,9 +231,9 @@ app.directive('arrowDown',function($timeout){
 		 restrict : 'A', // E = Element, A = Attribute, C = Class, M = Comment
 		 link: function($scope, iElm, iAttrs, controller) {
 
-		 	iElm.on('click',function(e){
 
-		 		console.log('hello');
+
+		 	iElm.on('click',function(e){
 
 		 		$scope.$parent.stage.step = iAttrs.chStep;
 		 		$scope.$parent.stage.route = iAttrs.chRoute;

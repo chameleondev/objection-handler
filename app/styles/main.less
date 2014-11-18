@@ -80,6 +80,8 @@
   opacity: 1;
 }
 
+
+
 // .ng-hide-add{
 //   opacity: 1;
 //   transition: 1s all;
@@ -280,6 +282,32 @@ h1{
 
       .objection{
         width: 432px;
+
+        p,li{
+          font-family: helvetica;
+        }
+      }
+
+      .make-choice {
+
+        margin-top: 75px;
+
+        .choice-arrow{
+          .at2x('../images/choice-arrow.png', 26px, 21px);
+          width: 21px;
+          height: 26px;
+          display: inline-block;
+          position: relative;
+          top: 8px;
+        }
+
+        h3{
+          margin:0 10px;
+        }
+
+        h3,p{
+          display:  inline;
+        }
       }
 
       .down-arrow{
@@ -516,9 +544,58 @@ h1{
           background-position: 2px 5px;
         }
 
+        .next-arrow.ng-hide-add-active{
+          display: none !important;
+        }
+
+        .next-arrow:enabled {
+          animation-name: pulse;
+          -webkit-animation-name: pulse;  
+
+          animation-duration: 1.5s; 
+          -webkit-animation-duration: 1.5s;
+
+          animation-iteration-count: infinite;
+          -webkit-animation-iteration-count: infinite;
+        }
+
       
     }
   }
 
 }
+
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.3;   
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1; 
+  } 
+  100% {
+    transform: scale(0.9);
+    opacity: 0.3; 
+  }     
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.95);
+    opacity: 0.3;   
+  }
+  50% {
+    -webkit-transform: scale(1);
+    opacity: 1; 
+  } 
+  100% {
+    -webkit-transform: scale(0.95);
+    opacity: 0.3; 
+  }     
+}
+
+
 
