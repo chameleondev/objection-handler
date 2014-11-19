@@ -7,12 +7,12 @@
 	<div class="small-text pull-left">
 		<div 
 		class="speech-text green small-bubble pull-left bubble-left" 
-		ng-class= "{'active':objection === 'objection4'}" 
+		ng-class= "{'active':objection === 'objection4','not-selected' : stage.route === 'c'}" 
 		speech-text 
 		ch-objection="objection4" 
 		ch-route="b"
 		id="objection4">
-			I am concerned that the open label design in your Phase III trials programme may bias
+			I am concerned that the open-label design may bias the results in the Phase III studies.
 		</div>
 
 		<button arrow-down ch-step="1" ch-route="b" ch-objection="objection6" class="next-arrow" ng-show="stage.route == 'b'" ng-disabled="stage.route == 'b' && stage.step > 0"></button>
@@ -22,15 +22,15 @@
 	<div class="small-text pull-right">
 	  <div 
 	  class="speech-text green small-bubble pull-right bubble-left"  
-	  ng-class= "{'active':objection === 'objection5'}" 
+	  ng-class= "{'active':objection === 'objection5','not-selected' : stage.route === 'b'}" 
 	  speech-text 
 	  ch-objection="objection5" 
 	  ch-route="c"
 	  id="objection5">
-	    Alternative response: Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet?
+	    I am concerned that the open label design is not an appropriate way to undertake a trial.
 	  </div>
 		
-	  <button arrow-down ch-step="1" ch-route="c" ch-objection="objection8" class="next-arrow" ng-show="stage.route == 'c'" ng-disabled="stage.route == 'c' && stage.step > 0"></button>
+	  <button arrow-down ch-step="1" ch-route="c" ch-objection="objection9" class="next-arrow" ng-show="stage.route == 'c'" ng-disabled="stage.route == 'c' && stage.step > 0"></button>
 	</div>
 
 </div>

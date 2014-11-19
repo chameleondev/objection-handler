@@ -1,70 +1,83 @@
-<div class="left-col col pull-left">
-
-<header>
-  <div class="header-icon"></div>
-  <h1>Panacea</h1>
-</header>
-
-<div id="left-scroll" scroller class="scroller">
-<section class="scroll-window">
-
-  <div ui-view="speech1" class="speech-section cssFade"></div>
-  <div ui-view="speech2" class="speech-section cssFade" ng-show="stage.step >= 2 || stage.route !== 'a'"></div>
-  <div ui-view="speech3" class="speech-section cssFade" ng-show="stage.step >= 3 || stage.route !== 'a'"></div>
-  <div ui-view="speech4" class="speech-section cssFade" ng-show="stage.step >= 4 || stage.route !== 'a'"></div>
-
-  <div ui-view="speech5" class="speech-section cssFade" ng-show="stage.step >= 1 && stage.route === 'b'"></div>
-  <div ui-view="speech6" class="speech-section cssFade" ng-show="stage.step >= 2 && stage.route === 'b'"></div>
-  <div ui-view="speech7" class="speech-section cssFade" ng-show="stage.step >= 1 && stage.route === 'c'"></div>
-
-
-</section>
-</div>
-
-
-</div>
-
-<div class="right-col col pull-left">
-
-<header>
-  <h1 ng-click="testA()">Objection Handler</h1>
-</header>
-
-<div id="right-scroll" class="scroller">
-<section>
-
-
-  <div class="objection-top">
-    <div ui-view="video1" ng-show="$parent.objection === 'objection1'" class="objection"></div>
-    <div ui-view="video2" ng-show="$parent.objection === 'objection2'" class="objection"></div>
-    <div ui-view="video3" ng-show="$parent.objection === 'objection3'" class="objection"></div>
-    <div ui-view="video4" ng-show="$parent.objection === 'objection4'" class="objection"></div>
-    <div ui-view="video5" ng-show="$parent.objection === 'objection5'" class="objection"></div>
-    <div ui-view="video6" ng-show="$parent.objection === 'objection6'" class="objection"></div>
-    <div ui-view="video7" ng-show="$parent.objection === 'objection7'" class="objection"></div>
-    <div ui-view="video8" ng-show="$parent.objection === 'objection8'" class="objection"></div>
-    <div ui-view="makeChoiceTop" ng-show="$parent.objection === 'makeChoice'" class="objection"></div>
-  </div>
-
-  <div class="down-arrow"></div>
-
-  <div  class="objection-bottom">
-    <div ui-view="content1" ng-show="$parent.objection === 'objection1'" class="objection"></div>
-    <div ui-view="content2" ng-show="$parent.objection === 'objection2'" class="objection"></div>
-    <div ui-view="content3" ng-show="$parent.objection === 'objection3'" class="objection"></div>
-    <div ui-view="content4" ng-show="$parent.objection === 'objection4'" class="objection"></div>
-    <div ui-view="content5" ng-show="$parent.objection === 'objection5'" class="objection"></div>
-    <div ui-view="content6" ng-show="$parent.objection === 'objection6'" class="objection"></div>
-    <div ui-view="content7" ng-show="$parent.objection === 'objection7'" class="objection"></div>
-    <div ui-view="content8" ng-show="$parent.objection === 'objection8'" class="objection"></div>
-    <div ui-view="makeChoiceBottom" ng-show="$parent.objection === 'makeChoice'" class="objection make-choice"></div>
-  </div>
-
+<div class="container objection-state">
   
-</section>
-</div>
+  <div class="left-col col pull-left">
+
+  <header>
+    <div class="header-icon" ui-sref="landing"></div>
+    <h1>Panacea</h1>
+  </header>
+
+  <div id="left-scroll" scroller class="scroller">
+  <section class="scroll-window">
+
+    <div ui-view="speech1" class="speech-section cssFade"></div>
+    <div ui-view="speech2" class="speech-section cssFade" ng-show="stage.step >= 2 || stage.route !== 'a'"></div>
+    <div ui-view="speech3" class="speech-section cssFade" ng-show="stage.step >= 3 || stage.route !== 'a'"></div>
+    <div ui-view="speech4" class="speech-section cssFade" ng-show="stage.step >= 4 || stage.route !== 'a'"></div>
+
+    <div ui-view="speechb1" class="speech-section cssFade" ng-show="stage.step >= 1 && stage.route === 'b'"></div>
+    <div ui-view="speechb2" class="speech-section cssFade" ng-show="stage.step >= 2 && stage.route === 'b'"></div>
+    <div ui-view="speechb3" class="speech-section cssFade" ng-show="stage.step >= 3 && stage.route === 'b'"></div>
+    <div ui-view="speechc1" class="speech-section cssFade" ng-show="stage.step >= 1 && stage.route === 'c'"></div>
+    <div ui-view="speechc2" class="speech-section cssFade" ng-show="stage.step >= 2 && stage.route === 'c'"></div>
+    <div ui-view="speechc3" class="speech-section cssFade" ng-show="stage.step >= 3 && stage.route === 'c'"></div>
+
+
+  </section>
+  </div>
+
+
+  </div>
+
+  <div class="right-col col pull-left">
+
+  <header>
+    <h1>Objection Handler</h1>
+  </header>
+
+  <div id="right-scroll" class="scroller">
+  <section>
+
+
+    <div class="objection-top">
+      <div ui-view="video1" ng-show="$parent.objection === 'objection1'" class="objection"></div>
+      <div ui-view="video2" ng-show="$parent.objection === 'objection2'" class="objection"></div>
+      <div ui-view="video3" ng-show="$parent.objection === 'objection3'" class="objection"></div>
+      <div ui-view="video4" ng-show="$parent.objection === 'objection4'" class="objection"></div>
+      <div ui-view="video5" ng-show="$parent.objection === 'objection5'" class="objection"></div>
+      <div ui-view="video6" ng-show="$parent.objection === 'objection6'" class="objection"></div>
+      <div ui-view="video7" ng-show="$parent.objection === 'objection7'" class="objection"></div>
+      <div ui-view="video8" ng-show="$parent.objection === 'objection8'" class="objection"></div>
+      <div ui-view="video9" ng-show="$parent.objection === 'objection9'" class="objection"></div>
+      <div ui-view="video10" ng-show="$parent.objection === 'objection10'" class="objection"></div>
+      <div ui-view="video11" ng-show="$parent.objection === 'objection11'" class="objection"></div>
+      <div ui-view="makeChoiceTop" ng-show="$parent.objection === 'makeChoice'" class="objection"></div>
+    </div>
+
+    <div class="down-arrow"></div>
+
+    <div  class="objection-bottom">
+      <div ui-view="content1" ng-show="$parent.objection === 'objection1'" class="objection"></div>
+      <div ui-view="content2" ng-show="$parent.objection === 'objection2'" class="objection"></div>
+      <div ui-view="content3" ng-show="$parent.objection === 'objection3'" class="objection"></div>
+      <div ui-view="content4" ng-show="$parent.objection === 'objection4'" class="objection"></div>
+      <div ui-view="content5" ng-show="$parent.objection === 'objection5'" class="objection"></div>
+      <div ui-view="content6" ng-show="$parent.objection === 'objection6'" class="objection"></div>
+      <div ui-view="content7" ng-show="$parent.objection === 'objection7'" class="objection"></div>
+      <div ui-view="content8" ng-show="$parent.objection === 'objection8'" class="objection"></div>
+      <div ui-view="content9" ng-show="$parent.objection === 'objection9'" class="objection"></div>
+      <div ui-view="content10" ng-show="$parent.objection === 'objection10'" class="objection"></div>
+      <div ui-view="content11" ng-show="$parent.objection === 'objection11'" class="objection"></div>
+      <div ui-view="makeChoiceBottom" ng-show="$parent.objection === 'makeChoice'" class="objection make-choice"></div>
+    </div>
+
+    
+  </section>
+  </div>
+
+  </div>
+
+  <feedback-modal ng-show="feedbackPopup"></feedback-modal>
+  <!-- <button class="feedback-btn btn" ng-click="feedbackPopup = true">Submit feedback</button> -->
 
 </div>
-
-<feedback-modal ng-show="feedbackPopup"></feedback-modal>
-<!-- <button class="feedback-btn btn" ng-click="feedbackPopup = true">Submit feedback</button> -->

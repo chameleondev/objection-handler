@@ -5,7 +5,9 @@
 @objectionLightBlue: #e0f5ff; 
 @buttonBlue: #4498ba; 
 @arrowBlue: #00436f;  
-@titleBlue: #068bd1; 
+@titleBlue: #068bd1;
+@notSelectedGrey : #EFEFEF;
+@objectionLandingGreen : #5a911b;
  
 
 // retina.less
@@ -61,14 +63,14 @@
 
 
 //animations
-// .ng-enter {
-//   opacity: 1;
-//   transition: 1s all;
-// }
+.ng-enter {
+  opacity: 0;
+  transition: 1s all;
+}
 
-// .ng-enter-active {
-//   opacity: 1;
-// }
+.ng-enter-active {
+  opacity: 1;
+}
 
 
 .ng-hide-remove{
@@ -163,6 +165,26 @@ h1{
   margin: 5px 0px;
 }
 
+.landing-state{
+  .at2x('../images/landing-bg.jpg', 1024px, 768px);
+
+  .col .speech-section .speech-text.bubble-left:after{
+    z-index: 0;
+  }
+
+  .left-col{
+    h1{
+      margin-left:95px;
+    }
+  }
+}
+
+
+.objection-state{
+  .at2x('../images/main-bg.png', 1024px, 768px);
+}
+
+
 .container{
   width: 1024px;
   height: 768px;
@@ -170,7 +192,7 @@ h1{
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
   padding: 0;
-  .at2x('../images/bg.png', 1024px, 768px);
+  
 
   .feedback-btn{
     background: @buttonBlue;
@@ -207,6 +229,11 @@ h1{
       color: #fff;
       display: inline-block;
     }
+
+    .speech-wide{
+      margin: 0 0 0 70px !important;
+    }
+
   }
 
   .right-col{
@@ -223,6 +250,19 @@ h1{
       overflow: hidden;
       position: relative;
       height: 600px;
+
+      .speech-wide.speech-text:first-child{
+        margin-top: 30px
+      }
+
+      .speech-wide.speech-text{
+        margin-bottom:20px;
+        font-size: 1.1em;
+      }
+
+      .speech-wide.speech-text:hover{
+        cursor: pointer;
+      }
 
       .objection-top{
         height: 250px;
@@ -293,7 +333,8 @@ h1{
         margin-top: 75px;
 
         .choice-arrow{
-          .at2x('../images/choice-arrow.png', 26px, 21px);
+          .at2x('../images/choice-arrow.png', 21px, 26px);
+          background-repeat: no-repeat;
           width: 21px;
           height: 26px;
           display: inline-block;
@@ -336,6 +377,10 @@ h1{
         display: inline-block;
         margin: 0 40px 0 20px;
       }
+
+      .header-icon:hover{
+        cursor: pointer;
+      }
     }
 
     .scroller{
@@ -353,11 +398,13 @@ h1{
       font-family: 'MarianinaFY-Regular';
       font-size: 1.3em;
       border-color: @objectionGreen;
+      // font-weight: bold;
+      line-height: 1.3em;
 
       .two-boxes{
         margin: 0 auto;
         width: 400px;
-        min-height: 160px
+        min-height: 170px
       }
 
       .side-text{
@@ -370,10 +417,7 @@ h1{
         text-align: center;
       }
 
-      .speech-wide{
-        margin: 0 0 0 70px !important;
-      }
-
+      
       .speech-text.green{
         background-color: @objectionGreen;
         border-color: @objectionGreen;
@@ -401,13 +445,25 @@ h1{
         color: #008bd1;
       }
 
+      .speech-text.small-bubble.not-selected{
+        background-color: @notSelectedGrey;
+        border-color: @notSelectedGrey;
+        color: #909090;
+        // opacity: 0.5;
+      }
+
+      .speech-text.landing-green{
+        background-color: @objectionLandingGreen;
+        border-color: @objectionLandingGreen;
+      }
+
       .small-text{
         width: 190px;
         position: relative;
         left: 15px;
 
         .next-arrow{
-          bottom: -35px;
+          bottom: -50px;
           left: 80px;
         }
       }
@@ -443,14 +499,18 @@ h1{
       }
 
       .speech-text.bubble-right:after{
-        border-width: 10px 0 10px 41px;
-        right: -19px;
+        // border-width: 10px 0 10px 41px;
+        // right: -19px;
+        border-width: 10px 0 5px 23px;
+        right: -17px;
         transform: rotate(30deg);
       }
       
       .speech-text.bubble-left:after{
-        border-width: 10px 41px 10px 0;
-        left: -19px;
+        // border-width: 10px 41px 10px 0;
+        // left: -19px;
+        border-width: 10px 23px 5px 0;
+        left: -17px;
         transform: rotate(-30deg);
       }
 
@@ -476,6 +536,14 @@ h1{
 
       .speech-text.light-blue.active:after{
         border-color: transparent lighten(@objectionLightBlue, 40%);
+      }
+
+      .speech-text.small-bubble.not-selected:after{
+        border-color: transparent @notSelectedGrey;
+      }
+
+      .speech-text.landing-green:after{
+        border-color: transparent @objectionLandingGreen;
       }
 
       .speech-text{
@@ -521,7 +589,7 @@ h1{
       }
 
       .arrow-container{
-        height: 40px;
+        height: 50px;
 
       }
 
@@ -534,14 +602,14 @@ h1{
           // border-color: @arrowBlue transparent transparent transparent;
           position: absolute;
           bottom: 3px;
-          left: 258px;
+          left: 250px;
           .at2x('../images/blue-arrow.png', 26px, 21px);
           border: none;
           background-color: rgba(0,0,0,0);
           outline: none;
-          padding: 15px;
+          padding: 20px;
           background-repeat: no-repeat;
-          background-position: 2px 5px;
+          background-position: 6px 9px;
         }
 
         .next-arrow.ng-hide-add-active{

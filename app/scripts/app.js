@@ -21,6 +21,11 @@ app.config(function($stateProvider,$urlRouterProvider) {
 
 	$stateProvider
 
+		.state('landing',{
+			url : '/',
+			templateUrl :'views/landing-tpl.html'
+		})
+
 		.state('home',{
 			url: '/',
 			abstract : true,
@@ -76,14 +81,23 @@ app.config(function($stateProvider,$urlRouterProvider) {
 				'speech4' : {
 					templateUrl : 'views/speech4-view.html'
 				},
-				'speech5' : {
-					templateUrl : 'views/speech5-view.html'
+				'speechb1' : {
+					templateUrl : 'views/speechb1-view.html'
 				},
-				'speech6' : {
-					templateUrl : 'views/speech6-view.html'
+				'speechb2' : {
+					templateUrl : 'views/speechb2-view.html'
 				},
-				'speech7' : {
-					templateUrl : 'views/speech7-view.html'
+				'speechb3' : {
+					templateUrl : 'views/speechb3-view.html'
+				},
+				'speechc1' : {
+					templateUrl : 'views/speechc1-view.html'
+				},
+				'speechc2' : {
+					templateUrl : 'views/speechc2-view.html'
+				},
+				'speechc3' : {
+					templateUrl : 'views/speechc3-view.html'
 				},
 				'video1@home' : {
 					template : '<div class="video video1"></div>'
@@ -133,6 +147,24 @@ app.config(function($stateProvider,$urlRouterProvider) {
 				'content8@home' : {
 					templateUrl : 'views/objection5/content.html'
 				},
+				'video9@home' : {
+					template : '<div class="video video3"></div>'
+				},
+				'content9@home' : {
+					templateUrl : 'views/objection5/content.html'
+				},
+				'video10@home' : {
+					template : '<div class="video video3"></div>'
+				},
+				'content10@home' : {
+					templateUrl : 'views/objection5/content.html'
+				},
+				'video11@home' : {
+					template : '<div class="video video3"></div>'
+				},
+				'content11@home' : {
+					templateUrl : 'views/objection5/content.html'
+				},
 				'makeChoiceTop@home' : {
 					template : '<div class="video video1"></div>'
 				},
@@ -141,6 +173,9 @@ app.config(function($stateProvider,$urlRouterProvider) {
 				}
 			}
 		});
+
+
+
 
   });
 
